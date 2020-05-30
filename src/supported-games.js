@@ -18,7 +18,7 @@ const SupportedGames = [
     installer: 'steamcmd',
     backend: 'srcds',
     appId: 4020,
-    launchParams: './srcds_run -console -game garrysmod +map gm_construct +maxplayers 16 -condebug &'
+    launchParams: './srcds_run -console -game garrysmod +map gm_construct +maxplayers 16 -condebug +host_workshop_collection 1838303608 &'
   },
   {
     name: 'rust',
