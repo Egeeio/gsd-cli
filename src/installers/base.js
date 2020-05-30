@@ -16,7 +16,7 @@ class BaseInstaller {
   }
 
   createUnitFile () {
-    const unitPath = `${os.homedir()}/.config/systemd/user/${this.name}.service`
+    const unitPath = `/etc/systemd/system/${this.name}.service`
     const unitFileContents = `[Unit]\nAfter=network.target\nDescription=Daemon for ${this.name} dedicated server\n[Install]\nWantedBy=default.target\n[Service]\nType=simple\nWorkingDirectory=${this.path}\nExecStart=/bin/bash ${this.path}/launch.sh`
     execSync(`rm -f ${unitPath}`)
     execSync(`touch ${unitPath}`)
