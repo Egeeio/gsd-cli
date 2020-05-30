@@ -1,3 +1,4 @@
+const os = require('os')
 const { execSync } = require('child_process')
 
 class BaseInstaller {
@@ -10,12 +11,12 @@ class BaseInstaller {
   }
 
   createDirectories () {
-    execSync(`mkdir -p /home/${this.user}/${this.name}-server`)
-    execSync(`mkdir -p /home/${this.user}/.config/systemd/user`)
+    execSync(`mkdir -p ${os.homedir()}/${this.name}-server`)
+    execSync(`mkdir -p ${os.homedir()}/.config/systemd/user`)
   }
 
   createUnitFile () {
-    const unitPath = `/home/${this.user}/.config/systemd/user/${this.name}.service`
+    const unitPath = `${os.homedir()}/.config/systemd/user/${this.name}.service`
     const unitFileContents = `[Unit]\nAfter=network.target\nDescription=Daemon for ${this.name} dedicated server\n[Install]\nWantedBy=default.target\n[Service]\nType=simple\nWorkingDirectory=${this.path}\nExecStart=/bin/bash ${this.path}/launch.sh`
     execSync(`rm -f ${unitPath}`)
     execSync(`touch ${unitPath}`)

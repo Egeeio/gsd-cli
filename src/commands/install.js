@@ -1,4 +1,5 @@
 const fs = require('fs')
+const os = require('os')
 const Chalk = require('chalk')
 const GameList = require('../supported-games')
 const TerrariaInstaller = require('../installers/tshock')
@@ -25,7 +26,7 @@ class InstallCommand extends Command {
     if (game) {
       this.nameChanger(game)
       game.user = process.env.USER
-      game.path = `/home/${game.user}/${game.name}-server`
+      game.path = `${os.homedir()}/${game.name}-server`
       game.dryrun = flags.dryrun
       return game
     } else {
