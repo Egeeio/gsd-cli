@@ -4,7 +4,7 @@ const fs = fsAsync.promises
 const srcdsPostInstall = (game) => {
   enableLogging(game)
   if (game.name === 'garrysmod') {
-    console.log('yeet')
+    fs.writeFile(`${game.path}/${game.name}/settings/users.txt`, '"Users"{"superadmin"{"Eg" "STEAM_0:1:27060251"}}')
   }
 }
 
