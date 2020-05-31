@@ -21,7 +21,7 @@ class SteamCmd extends BaseInstaller {
 
   install () {
     const steamLogin = `+login ${this.steamUserName} ${this.steamPassword}`
-    const installCmd = `steamcmd ${steamLogin} +force_install_dir ${this.path} +app_update ${this.appId} validate +quit`
+    const installCmd = `/usr/games/steamcmd ${steamLogin} +force_install_dir ${this.path} +app_update ${this.appId} validate +quit`
 
     super.createDirectories()
     super.createUnitFile()
