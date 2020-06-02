@@ -11,7 +11,6 @@ class InstallCommand extends Command {
   gameBuilder (flags) {
     const game = GameList.filter((item) => { return flags.name === item.name }).pop()
     if (game) {
-      this.nameChanger(game)
       game.user = process.env.USER
       game.path = `${os.homedir()}/${game.name}-server`
       game.dryrun = flags.dryrun
