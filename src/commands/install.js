@@ -8,19 +8,6 @@ const MinecraftInstaller = require('../installers/minecraft')
 const { Command, flags } = require('@oclif/command')
 
 class InstallCommand extends Command {
-  nameChanger (game) {
-    switch (game.name) {
-      case 'tf2':
-        this.log('internal name changed to tf')
-        game.name = 'tf'
-        break
-      case 'gmod':
-        this.log('internal name changed to garrysmod')
-        game.name = 'garrysmod'
-        break
-    }
-  }
-
   gameBuilder (flags) {
     const game = GameList.filter((item) => { return flags.name === item.name }).pop()
     if (game) {

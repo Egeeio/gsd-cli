@@ -7,14 +7,14 @@ const SupportedGames = [
     launchParams: 'mono ./MultiAdmin.exe'
   },
   {
-    name: 'tf2',
+    name: 'tf',
     installer: 'steamcmd',
     backend: 'srcds',
     appId: 232250,
     launchParams: './srcds_run -console -game tf +map ctf_turbine +maxplayers 24 +sv_pure 1 -condebug &'
   },
   {
-    name: 'gmod',
+    name: 'garrysmod',
     installer: 'steamcmd',
     backend: 'srcds',
     appId: 4020,
