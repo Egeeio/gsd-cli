@@ -21,6 +21,13 @@ const SupportedGames = [
     launchParams: './srcds_run -console -game garrysmod +map gm_construct +maxplayers 16 -condebug +host_workshop_collection 1838303608 &'
   },
   {
+    name: 'leftfordeadtwo',
+    installer: 'steamcmd',
+    backend: 'srcds',
+    appId: 222860,
+    launchParams: './srcds_run -console -game left4dead2 -condebug +maxplayers 4  +map c1m1_hotel &'
+  },
+  {
     name: 'rust',
     installer: 'steamcmd',
     backend: 'unity',
