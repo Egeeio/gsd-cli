@@ -42,7 +42,7 @@ $ npm install -g gsd-cli
 $ gsd-cli COMMAND
 running command...
 $ gsd-cli (-v|--version|version)
-gsd-cli/2.0.4 linux-x64 node-v12.16.3
+gsd-cli/2.1.0 linux-x64 node-v12.18.0
 $ gsd-cli --help [COMMAND]
 USAGE
   $ gsd-cli COMMAND
@@ -84,5 +84,5 @@ OPTIONS
   -n, --name=name  name of the server to install
 ```
 
-_See code: [src/commands/install.js](https://github.com/Egeeio/gsd-cli/blob/v2.0.4/src/commands/install.js)_
+_See code: [src/commands/install.js](https://github.com/Egeeio/gsd-cli/blob/v2.1.0/src/commands/install.js)_
 <!-- commandsstop -->
